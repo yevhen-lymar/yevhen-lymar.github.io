@@ -31,7 +31,7 @@ body, .avatar {
 body {
     display: flex;
     flex-direction: column;
-    width: 800px;
+    width: 290px;
     min-height: 100vh;  /*100% vid viewport*/
     background-color: var(--main-color);
     box-shadow: 0px 0px 10px 0px var(--font-color);
@@ -49,7 +49,7 @@ footer {
     margin-top: auto;
 }
 .avatar {
---avatar-size: 250px;
+--avatar-size: 150px;
 
 display: block;
 height: var(--avatar-size);
@@ -73,10 +73,10 @@ border-radius: 50%;
     display: flex;
    /* flex-direction: row; */
     justify-content: center;
-    gap: var(--gap);
+    gap: 10px;
 }
-.links img, .language img  {
-    --link-size: 35px;
+.links img {
+    --link-size: 25px;
 
     height: var(--link-size);
     width: var(--link-size);
@@ -91,7 +91,7 @@ border-radius: 50%;
     font-weight: bold;
 }
 .large-button {
-    width: calc(100% - 200px);
+    width: calc(100% - 50px);
     height: 50px;
     background-color: var(--font-color);
     padding-bottom: 1px;
@@ -99,8 +99,10 @@ border-radius: 50%;
     margin: auto;
 }
 .ukraine-button, .english-button {
-    width: 50px;
-    height: 50px;
+    --language-size: 35px;
+
+    width: var(--language-size);
+    height: var(--language-size);
     border-radius: 50%;
     background-size: 100px;
     background-repeat: no-repeat;
@@ -112,4 +114,38 @@ border-radius: 50%;
 }
 .english-button {
     background-image: url(../images_svg/gbunitedkingdomflag.svg);
+}
+@media screen and (min-width: 530px){
+    body {
+        width: 500px;
+    }
+}
+@media screen and (min-width: 832px) {
+    body {
+        width: 800px;
+    }
+    .large-button {
+        width: calc(100% - 200px);
+    }
+    .avatar {
+        --avatar-size: 250px;
+
+        height: var(--avatar-size);
+        width: var(--avatar-size);
+        }
+        .ukraine-button, .english-button {
+            --language-size: 50px;
+        
+            width: var(--language-size);
+            height: var(--language-size);
+        }
+        .links img {
+            --link-size: 35px;
+        
+            height: var(--link-size);
+            width: var(--link-size);
+        }
+        .links {
+            gap: var(--gap);
+        }
 }
