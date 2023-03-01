@@ -31,7 +31,7 @@ body, .avatar {
 body {
     display: flex;
     flex-direction: column;
-    width: 330px;
+    width: 400px;
     min-height: 100vh;  /*100% vid viewport*/
     background-color: var(--main-color);
     box-shadow: 0px 0px 10px 0px var(--font-color);
