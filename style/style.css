@@ -1,0 +1,115 @@
+:root {
+    --main-color: #1a1d20;
+    --second-color: #858585;
+    --font-color: #96a1b0;
+    --link-color: #b8d3fa;
+    --gap: 16px;
+}
+body, h1, h2, ul, p {
+    margin: 0;
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+a:hover, a:focus, a:active {
+    color: var(--second-color);
+    opacity: 0.8;
+}
+html {
+background-color: var(--second-color);
+color: var(--font-color);
+}
+body, .avatar {
+    margin: 0 auto;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    min-height: 100vh;  /*100% vid viewport*/
+    background-color: var(--main-color);
+    box-shadow: 0px 0px 10px 0px var(--font-color);
+}
+header, main, .avatar, .imageTop, .name, .description, .location, .links, footer {
+    margin-bottom: var(--gap);
+}
+header {
+    position: relative;
+}
+main {
+    padding: var(--gap);
+}
+footer {
+    margin-top: auto;
+}
+.avatar {
+--avatar-size: 250px;
+
+display: block;
+height: var(--avatar-size);
+width: var(--avatar-size);
+object-fit: cover;
+border: 2px solid var(--link-color);
+border-radius: 50%;
+}
+.imageTop {
+    display: block;
+    width: 100%;
+}
+.nickname, .name, .description, .location, .developed, .year {
+    text-align: center;
+}
+.language {
+    position: absolute;
+    right: var(--gap);
+}
+.links {
+    display: flex;
+   /* flex-direction: row; */
+    justify-content: center;
+    gap: var(--gap);
+}
+.links img, .language img  {
+    --link-size: 35px;
+
+    height: var(--link-size);
+    width: var(--link-size);
+}
+.large-button, .ukraine-button, .english-button{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--link-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+.large-button {
+    width: calc(100% - 200px);
+    height: 50px;
+    background-color: var(--font-color);
+    padding-bottom: 1px;
+    border-radius: 35px;
+    margin: auto;
+}
+.ukraine-button, .english-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--main-color);
+}
+.ukraine-button {
+    background-image: url(../images_svg/uaukraineflag.svg);
+}
+.english-button {
+    background-image: url(../images_svg/gbunitedkingdomflag.svg);
+}
