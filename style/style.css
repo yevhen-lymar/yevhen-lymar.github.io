@@ -115,10 +115,12 @@ border-radius: 50%;
 .english-button {
     background-image: url(../images_svg/gbunitedkingdomflag.svg);
 }
+
 @media screen and (min-width: 430px){
     body {
         width: 400px;
     }
+}
 @media screen and (min-width: 530px){
     body {
         width: 500px;
@@ -137,19 +139,19 @@ border-radius: 50%;
         height: var(--avatar-size);
         width: var(--avatar-size);
         }
-        .ukraine-button, .english-button {
-            --language-size: 50px;
+    .ukraine-button, .english-button {
+         --language-size: 50px;
         
-            width: var(--language-size);
-            height: var(--language-size);
+        width: var(--language-size);
+        height: var(--language-size);
         }
-        .links img {
-            --link-size: 55px;
+    .links img {
+        --link-size: 55px;
         
-            height: var(--link-size);
-            width: var(--link-size);
+        height: var(--link-size);
+         width: var(--link-size);
         }
-        .links {
-            gap: var(--gap);
+    .links {
+         gap: var(--gap);
         }
 }
