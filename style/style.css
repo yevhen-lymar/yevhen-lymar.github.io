@@ -1,145 +1,182 @@
 :root {
-    --main-color: #1a1d20;
-    --second-color: #858585;
-    --font-color: #96a1b0;
-    --link-color: #d8e6fae1;
-    --gap: 16px;
+  --main-color: #1a1d20;
+  --second-color: #858585;
+  --font-color: #96a1b0;
+  --link-color: #d8e6fae1;
+  --gap: 16px;
 }
-body, h1, h2, ul, p {
-    margin: 0;
+body,
+h1,
+h2,
+ul,
+p {
+  margin: 0;
 }
 ul {
-    padding: 0;
-    list-style: none;
+  padding: 0;
+  list-style: none;
 }
 a {
-    color: var(--link-color);
-    text-decoration: none;
-    transition: 0.3s;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: 0.3s;
 }
-a:hover, a:focus, a:active {
-    color: var(--second-color);
-    opacity: 0.8;
+a:hover,
+a:focus,
+a:active {
+  color: var(--second-color);
+  opacity: 0.8;
 }
 html {
-background-color: var(--second-color);
-color: var(--font-color);
+  background-color: var(--second-color);
+  color: var(--font-color);
 }
-body, .avatar {
-    margin: 0 auto;
+body,
+.avatar {
+  margin: 0 auto;
 }
 body {
-    display: flex;
-    flex-direction: column;
-    width: 320px;
-    min-height: 100vh;  /*100% vid viewport*/
-    background-color: var(--main-color);
-    box-shadow: 0px 0px 10px 0px var(--font-color);
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  min-height: 100vh; /*100% vid viewport*/
+  background-color: var(--main-color);
+  box-shadow: 0px 0px 10px 0px var(--font-color);
 }
-header, main, .avatar, .imageTop, .name, .description, .location, .links, footer {
-    margin-bottom: var(--gap);
+header,
+main,
+.avatar,
+.imageTop,
+.name,
+.description,
+.location,
+.links,
+footer {
+  margin-bottom: var(--gap);
 }
 header {
-    position: relative;
+  position: relative;
 }
 main {
-    padding: var(--gap);
+  padding: var(--gap);
 }
 footer {
-    margin-top: auto;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 .avatar {
---avatar-size: 190px;
+  --avatar-size: 190px;
 
-display: block;
-height: var(--avatar-size);
-width: var(--avatar-size);
-object-fit: cover;
-border: 2px solid var(--link-color);
-border-radius: 50%;
+  display: block;
+  height: var(--avatar-size);
+  width: var(--avatar-size);
+  object-fit: cover;
+  border: 2px solid var(--link-color);
+  border-radius: 50%;
 }
 .imageTop {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
-.nickname, .name, .description, .location, .developed, .year {
-    text-align: center;
+.nickname,
+.name,
+.description,
+.location,
+.developed,
+.year {
+  text-align: center;
 }
 .language {
-    position: absolute;
-    right: var(--gap);
+  position: absolute;
+  right: var(--gap);
 }
 .links {
-    display: flex;
-   /* flex-direction: row; */
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: var(--gap);
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--gap);
 }
 .links img {
-    --link-size: 55px;
+  --link-size: 55px;
 
-    height: var(--link-size);
-    width: var(--link-size);
+  height: var(--link-size);
+  width: var(--link-size);
 }
-.large-button, .ukraine-button, .english-button{
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    align-items: center;
-    border: 2px solid var(--link-color);
-    font-size: 16px;
-    font-weight: bold;
+.large-button,
+.ukraine-button,
+.english-button {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--link-color);
+  font-size: 16px;
+  font-weight: bold;
 }
 .large-button {
-    width: calc(100% - 50px);
-    height: 50px;
-    background-color: var(--font-color);
-    padding-bottom: 1px;
-    border-radius: 35px;
-    margin: auto;
+  width: calc(100% - 50px);
+  height: 50px;
+  background-color: var(--font-color);
+  padding-bottom: 1px;
+  border-radius: 35px;
+  margin: auto;
 }
-.ukraine-button, .english-button {
-    --language-size: 35px;
+.ukraine-button,
+.english-button {
+  --language-size: 35px;
+
+  width: var(--language-size);
+  height: var(--language-size);
+  border-radius: 50%;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* color: var(--main-color); */
+}
+.ukraine-button {
+  background-image: url(../images_svg/uaukraineflag.svg);
+}
+.english-button {
+  background-image: url(../images_svg/gbunitedkingdomflag.svg);
+}
+
+.border-top {
+  width: calc(100% - 20%);
+  height: 4px;
+  background-color: var(--font-color);
+  border-bottom: 3px solid var(--second-color);
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 320px) {
+  body {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 900px) {
+  body {
+    width: 900px;
+  }
+  .large-button {
+    width: calc(100% - 280px);
+  }
+  .avatar {
+    --avatar-size: 250px;
+
+    height: var(--avatar-size);
+    width: var(--avatar-size);
+  }
+  .ukraine-button,
+  .english-button {
+    --language-size: 50px;
 
     width: var(--language-size);
     height: var(--language-size);
-    border-radius: 50%;
-    background-size: 100px;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* color: var(--main-color); */
-}
-.ukraine-button {
-    background-image: url(../images_svg/uaukraineflag.svg);
-}
-.english-button {
-    background-image: url(../images_svg/gbunitedkingdomflag.svg);
-}
-
-@media screen and (min-width: 320px){
-    body {
-        width: 100%;
-    }
-}
-@media screen and (min-width: 900px) {
-    body {
-        width: 900px;
-    }
-    .large-button {
-        width: calc(100% - 280px);
-    }
-    .avatar {
-        --avatar-size: 250px;
-
-        height: var(--avatar-size);
-        width: var(--avatar-size);
-        }
-    .ukraine-button, .english-button {
-         --language-size: 50px;
-        
-        width: var(--language-size);
-        height: var(--language-size);
-        font-size: 20px;
-        }
+    font-size: 20px;
+  }
 }
