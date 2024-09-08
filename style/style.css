@@ -5,6 +5,7 @@
   --link-color: #d8e6fae1;
   --gap: 16px;
 }
+
 body,
 h1,
 h2,
@@ -12,37 +13,45 @@ ul,
 p {
   margin: 0;
 }
+
 ul {
   padding: 0;
   list-style: none;
 }
+
 a {
   color: var(--link-color);
   text-decoration: none;
   transition: 0.3s;
 }
+
 a:hover,
 a:focus,
 a:active {
   color: var(--second-color);
   opacity: 0.8;
 }
+
 html {
   background-color: var(--second-color);
   color: var(--font-color);
 }
+
 body,
 .avatar {
   margin: 0 auto;
 }
+
 body {
   display: flex;
   flex-direction: column;
   width: 320px;
-  min-height: 100vh; /*100% vid viewport*/
+  min-height: 100vh;
+  /*100% vid viewport*/
   background-color: var(--main-color);
   box-shadow: 0px 0px 10px 0px var(--font-color);
 }
+
 header,
 main,
 .avatar,
@@ -54,12 +63,15 @@ main,
 footer {
   margin-bottom: var(--gap);
 }
+
 header {
   position: relative;
 }
+
 main {
   padding: var(--gap);
 }
+
 footer {
   margin-top: auto;
   display: flex;
@@ -68,6 +80,7 @@ footer {
   align-items: center;
   gap: 10px;
 }
+
 .avatar {
   --avatar-size: 190px;
 
@@ -78,10 +91,12 @@ footer {
   border: 2px solid var(--link-color);
   border-radius: 50%;
 }
+
 .imageTop {
   display: block;
   width: 100%;
 }
+
 .nickname,
 .name,
 .description,
@@ -90,10 +105,12 @@ footer {
 .year {
   text-align: center;
 }
+
 .language {
   position: absolute;
   right: var(--gap);
 }
+
 .links {
   display: flex;
   /* flex-direction: row; */
@@ -101,12 +118,14 @@ footer {
   flex-wrap: wrap;
   gap: var(--gap);
 }
+
 .links img {
   --link-size: 55px;
 
   height: var(--link-size);
   width: var(--link-size);
 }
+
 .large-button,
 .ukraine-button,
 .english-button {
@@ -118,6 +137,7 @@ footer {
   font-size: 16px;
   font-weight: bold;
 }
+
 .large-button {
   width: calc(100% - 50px);
   height: 50px;
@@ -126,6 +146,7 @@ footer {
   border-radius: 35px;
   margin: auto;
 }
+
 .ukraine-button,
 .english-button {
   --language-size: 35px;
@@ -138,9 +159,11 @@ footer {
   background-position: center;
   /* color: var(--main-color); */
 }
+
 .ukraine-button {
   background-image: url(../images_svg/uaukraineflag.svg);
 }
+
 .english-button {
   background-image: url(../images_svg/gbunitedkingdomflag.svg);
 }
@@ -153,24 +176,63 @@ footer {
   border-radius: 4px;
 }
 
+.loader {
+  width: 80px;
+  height: 40px;
+  color: #000;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  padding: 3px;
+  background:
+    repeating-linear-gradient(90deg, currentColor 0 10px, #0000 0 15px) 0/0% no-repeat content-box content-box;
+  position: relative;
+  box-sizing: border-box;
+  animation: l5 2s infinite steps(6);
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: 100%;
+  width: 10px;
+  background:
+    linear-gradient(#0000 calc(50% - 7px), currentColor 0 calc(50% - 5px),
+      #0000 0 calc(50% + 5px), currentColor 0 calc(50% + 7px), #0000 0) left /100% 100%,
+    linear-gradient(currentColor calc(50% - 5px), #0000 0 calc(50% + 5px), currentColor 0) left /2px 100%,
+    linear-gradient(#0000 calc(50% - 5px), currentColor 0 calc(50% + 5px), #0000 0) right/2px 100%;
+  background-repeat: no-repeat;
+}
+
+@keyframes l5 {
+  100% {
+    background-size: 120%
+  }
+}
+
 @media screen and (min-width: 320px) {
   body {
     width: 100%;
   }
 }
+
 @media screen and (min-width: 900px) {
   body {
     width: 900px;
   }
+
   .large-button {
     width: calc(100% - 280px);
   }
+
   .avatar {
     --avatar-size: 250px;
 
     height: var(--avatar-size);
     width: var(--avatar-size);
   }
+
   .ukraine-button,
   .english-button {
     --language-size: 50px;
