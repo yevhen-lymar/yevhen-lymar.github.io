@@ -1,15 +1,22 @@
 @import url("font.css");
 
+:root {
+  /* colors */
+  --main-color: #1a1d20;
+  --second-color: #858585;
+  --font-color: #96a1b0;
+  --link-color: #d8e6fae1;
+  --gap: 16px;
+  /* size */
+  --btn-size: 35px;
+}
+
 * {
   box-sizing: border-box;
   text-decoration: none;
   margin: 0;
   padding: 0;
 }
-
-/* html {
-  overflow-y: scroll;
-} */
 
 a,
 button {
@@ -18,7 +25,7 @@ button {
 
 a:hover,
 button:hover {
-  color: #700000;
+  color: var(--second-color);
 }
 .link:active,
 .btn:active,
@@ -27,7 +34,7 @@ button:hover {
 }
 
 body {
-  background-color: #2c2222;
+  background-color: var(--main-color);
   font-family: "Roboto Mono", sans-serif;
 }
 
@@ -37,7 +44,7 @@ body {
 }
 
 .header {
-  background-color: rgba(196, 196, 196, 0.9);
+  background-color: var(--second-color);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-bottom: solid 2px gray;
@@ -58,8 +65,8 @@ body {
 }
 
 .link-home {
-  background-color: #fff;
-  color: #000;
+  background-color: var(--link-color);
+  color: var(--main-color);
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 300;
@@ -67,8 +74,16 @@ body {
   padding: 4px 8px;
 }
 
+.btn {
+  background-color: var(--link-color);
+  width: var(--btn-size);
+  height: var(--btn-size);
+  border: none;
+  border-radius: 2px;
+}
+
 .title-header {
-  color: #3a3a3a;
+  color: var(--main-color);
   text-transform: uppercase;
   font-size: 14px;
   display: flex;
@@ -76,13 +91,6 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   text-align: center;
-}
-
-.btn {
-  width: 35px;
-  height: 35px;
-  border: none;
-  border-radius: 2px;
 }
 
 .projects {
@@ -104,8 +112,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* opacity: 1;
-  transition: opacity 0.5s ease; */
 }
 
 .grid {
@@ -113,31 +119,28 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   gap: 10px;
-  /* opacity: 1;
-  transition: opacity 0.5s ease; */
 }
 
 .hidden {
-  /* display: none; */
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 
 .link {
-  background-color: #e6e6e6;
+  background-color: var(--link-color);
   text-align: center;
   width: 300px;
   margin: 6px 0;
   padding: 20px 40px;
-  border: solid 2px #000;
+  border: solid 2px var(--second-color);
   border-radius: 10px;
-  color: #000;
+  color: var(--main-color);
 }
 
 .countProjects {
   text-align: center;
   width: 300px;
-  color: #fff;
+  color: var(--font-color);
   margin-bottom: 6px;
   padding: 6px;
   border-bottom: 1px solid #fff;
@@ -146,7 +149,7 @@ body {
 .footer {
   margin-top: 6px;
   height: 80px;
-  background-color: rgba(145, 145, 145, 0.6);
+  background-color: var(--second-color);
   border-top: 2px solid rgba(0, 0, 0, 0.5);
 }
 
@@ -172,7 +175,7 @@ body {
   width: 120px;
   height: 22px;
   border-radius: 20px;
-  color: #979797;
+  color: var(--second-color);
   border: 2px solid;
   position: relative;
 }
