@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/filterAndSearchUserInfoStyle.css" />
+    <title>Filter and Search Info for User</title>
+  </head>
+  <body>
+    <h1>List Users</h1>
+    <div class="container">
+      <div class="form-container">
+        <h2>Enter and select a user</h2>
+        <input
+          list="userName"
+          type="text"
+          name="userName"
+          class="userName"
+          id="userNameText"
+          placeholder="Enter name"
+        /><button id="btn" class="btn">Click me</button>
+        <datalist id="userName"></datalist>
+      </div>
+      <div class="users-list-container">
+        <h2>All Users List</h2>
+        <ul class="users-list"></ul>
+      </div>
+    </div>
+    <!-- modal window -->
+    <div id="myModal" class="modal"></div>
+    <!-- java-scripts -->
+    <!-- <script src="../script/searchUsersPostPromise.js"></script> -->
+    <script src="../script/filterAndSearchUserInfoScripts.js"></script>
+  </body>
+</html>

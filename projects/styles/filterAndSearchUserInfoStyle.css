@@ -1,0 +1,103 @@
+@import url("font.css");
+
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e0e0e0;
+  font-family: "Loto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+h1 {
+  margin: 22px 0;
+}
+
+.container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.form-container h2,
+.users-list-container h2 {
+  text-align: center;
+  margin: 12px 0;
+}
+
+.form-container {
+  width: 60%;
+}
+
+.form-container .userName {
+  width: 65%;
+  height: 36px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form-container .btn {
+  height: 36px;
+  width: 30%;
+  margin: 0 6px;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.form-container .btn:active {
+  transform: scale(0.98);
+}
+
+.form-container .btn:hover {
+  background-color: #888;
+  color: #fff;
+}
+
+.users-list-container {
+  width: 40%;
+}
+
+.users-list-item {
+  margin-top: 18px;
+  padding-left: 24px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Стиль для модального вікна */
+.modal {
+  display: none; /* Приховано за замовчуванням */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Темний фон */
+}
+
+/* Контент модального вікна */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 32px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}

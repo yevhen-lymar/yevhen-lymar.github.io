@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Моя сторінка з проєктами, які я робив для практики"
+    />
+    <meta
+      name="keywords"
+      content="Мої проєкти, Java Script, HTML, CSS, Git, Resume, Cvo"
+    />
+    <meta name="author" content="Yevhen Lymar" />
+    <meta property="og:title" content="Проєкти JS" />
+    <meta
+      property="og:description"
+      content="Моя сторінка з проєктами, які я робив для практики"
+    />
+    <meta
+      property="og:image"
+      content="https://yevhen-lymar.github.io/images/seo-guide.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://yevhen-lymar.github.io/index.html"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images_favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images_favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images_favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images_favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./images_favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- page styles -->
+    <link rel="stylesheet" href="./styles/stylesGeneral.css" />
+    <title>Projects | Yevhen Lymar - Info</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container">
+        <a href="../index.html" class="link-home"
+          ><i class="fa-solid fa-house"></i> <span>Home</span></a
+        >
+        <div class="title-header">
+          <h1>My JavaScripts Projects</h1>
+        </div>
+        <div class="toggle-container">
+          <button class="btn" id="grid">
+            <i class="fa-solid fa-grip"></i>
+          </button>
+          <button class="btn" id="flex">
+            <i class="fa-solid fa-grip-lines"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="loader-container" id="loader-container">
+      <div id="loader" class="loader" style="display: none"></div>
+    </div>
+
+    <section id="projects" class="projects">
+      <div class="container">
+        <!-- <h1>My JavaScripts Projects</h1> -->
+        <div class="countProjects">Count of Projects: <span></span></div>
+        <div class="flex" id="toggle-g-f">
+          <a href="./pages/blurryLoading.html" class="link">Blurry Loading</a>
+          <a href="./pages/DadJokes.html" class="link">Dad Jokes</a>
+          <a href="./pages/expandingCards.html" class="link">Expanding Cards</a>
+          <a href="./pages/formInputWave.html" class="link">Form Input Wave</a>
+          <a href="./pages/hiddenSearch.html" class="link">Hidden Search</a>
+          <a href="./pages/progressSteps.html" class="link">Progress Steps</a>
+          <a href="./pages/rotatingNvigation.html" class="link"
+            >Rotatng Navigation</a
+          >
+          <a href="./pages/scrollAnimation.html" class="link"
+            >Scroll Animation</a
+          >
+          <a href="./pages/soundBoard.html" class="link">Sound Board</a>
+          <a href="./pages/splitLandingPage.html" class="link"
+            >Split Landing Page</a
+          >
+          <a href="./pages/eventKeyCodes.html" class="link">Event KeyCodes</a>
+          <a href="./pages/FAQ.html" class="link">FAQ</a>
+          <a href="./pages/randomChoisePicker.html" class="link"
+            >Random Choice Picker</a
+          >
+          <a href="./pages/animatedNavigation.html" class="link"
+            >Animated Navigation</a
+          >
+          <a href="./pages/incrementCounter.html" class="link"
+            >Increment Counter</a
+          >
+          <a href="./pages/drinkWater.html" class="link">Drink Water</a>
+          <a href="./pages/movieApp.html" class="link">Movie App</a>
+          <a href="./pages/backgroundSlider.html" class="link"
+            >Background Slider</a
+          >
+          <a href="./pages/themeClock.html" class="link">Theme Clock</a>
+          <a href="./pages/buttonRippleEffect.html" class="link"
+            >Button Ripple Effect</a
+          >
+          <a href="./pages/dragNdrop.html" class="link">Drag N Drop</a>
+          <a href="./pages/newsApp.html" class="link">News App</a>
+          <a href="./pages/toDolist.html" class="link">To-Do List</a>
+          <a href="./pages/filterAndSearchUserInfo.html" class="link"
+            >Filter And Search User</a
+          >
+          <a href="./pages/drawingApp.html" class="link">Drawing App</a>
+          <a href="./pages/kineticLoader.html" class="link">Kinetic Loader</a>
+          <a href="./pages/contentPlaceholder.html" class="link"
+            >Content Placeholder</a
+          >
+          <a href="./pages/stickyNavigation.html" class="link"
+            >Sticky Navigation</a
+          >
+          <a href="./pages/verticalSlider.html" class="link">Vertical Slider</a>
+          <a href="./pages/toastNotifications.html" class="link"
+            >Toast Notifications</a
+          >
+          <a href="./pages/githubProfiles.html" class="link">Github Profile</a>
+          <a href="./pages/doubleClickHeart.html" class="link"
+            >Double Click Heart</a
+          >
+          <a href="./pages/autoTextEffect.html" class="link"
+            >Auto Text Effect</a
+          >
+          <a href="./pages/passwordGenerator.html" class="link"
+            >Password Generator</a
+          >
+          <a href="./pages/goodCheapFast.html" class="link"
+            >Good, Cheap, Fast</a
+          >
+          <a href="./pages/notesApp.html" class="link">Notes App</a>
+          <a href="./pages/animatedCountdown.html" class="link"
+            >Animated Countdown</a
+          >
+          <a href="./pages/imageCarousel.html" class="link">Image Carousel</a>
+          <a href="./pages/hoverBoard.html" class="link">Hoverboard</a>
+          <a href="./pages/pokedex.html" class="link">Pokedex</a>
+          <a href="./pages/mobileTabNavigation.html" class="link"
+            >Mobile Tab Navigation</a
+          >
+          <a href="./pages/passwordStrengthBackground.html" class="link"
+            >Password Strength Background</a
+          >
+          <a href="" class="link">3D Boxes Background</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div>Made by yevhen_lymar</div>
+        <div>2024</div>
+      </div>
+    </footer>
+
+    <button class="btn scroll-top" id="up-scroll">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- java-scripts -->
+    <script src="./script/scriptsGeneral.js"></script>
+  </body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Моя сторінка з проєктами, які я робив для практики"
+    />
+    <meta
+      name="keywords"
+      content="Мої проєкти, Java Script, HTML, CSS, Git, Resume, Cvo"
+    />
+    <meta name="author" content="Yevhen Lymar" />
+    <meta property="og:title" content="Проєкти JS" />
+    <meta
+      property="og:description"
+      content="Моя сторінка з проєктами, які я робив для практики"
+    />
+    <meta
+      property="og:image"
+      content="https://yevhen-lymar.github.io/images/seo-guide.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://yevhen-lymar.github.io/index.html"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images_favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images_favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images_favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images_favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./images_favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- page styles -->
+    <link rel="stylesheet" href="./styles/_general_styles.css" />
+    <title data-translate="title"></title>
+  </head>
+  <body>
+    <!-- loader -->
+    <div class="hidden" id="loader">
+      <div class="loader"></div>
+    </div>
+    <!-- Content -->
+    <div id="page-content">
+      <header class="header" id="header">
+        <div class="container">
+          <div class="lang-button">
+            <button class="btn" id="lang-toggle" data-translate="lang-button">
+              Lang
+            </button>
+          </div>
+          <div class="title-header">
+            <h1 data-translate="name">Yevhen Lymar</h1>
+          </div>
+          <nav class="nav-container">
+            <ul>
+              <li><a href="#" data-translate="nav-home"></a></li>
+              <li><a href="#" data-translate="nav-about"></a></li>
+              <li>
+                <a
+                  href="./projects/index.html"
+                  data-translate="nav-projects"
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <section id="profile" class="profile">
+          <div class="container">
+            <img src="./images_png/code.png" alt="" class="icon one" />
+            <img src="./images_png/code.png" alt="" class="icon two" />
+            <img src="./images_png/html.png" alt="" class="icon tree" />
+            <img src="./images_png/css.png" alt="" class="icon four" />
+            <img src="./images_png/js.png" alt="" class="icon five" />
+            <img src="./images_png/react.png" alt="" class="icon six" />
+            <img src="./images_png/bootstrap.png" alt="" class="icon seven" />
+            <img src="./images_png/git.png" alt="" class="icon eight" />
+            <img
+              class="avatar"
+              src="./images_jpeg/avatar.jpg"
+              alt="My avatar"
+            />
+            <h2 class="nickname">yevhen_lymar</h2>
+            <h1 data-translate="name" class="name"></h1>
+            <p data-translate="description" class="description"></p>
+            <div data-translate="location" class="location"></div>
+            <div class="info-me">
+              <h3 data-translate="info-me-title"></h3>
+              <div data-translate="info-me-text"></div>
+            </div>
+            <div class="border-bottom"></div>
+          </div>
+        </section>
+        <section id="skills" class="skills">
+          <div class="container">
+            <div class="skills-me">
+              <h3 data-translate="skills-me-title">Skills</h3>
+              <div data-translate="skills-me-text">
+                <div>
+                  <strong data-translate="skills-sub-title-1"></strong
+                  ><span data-translate="skills-text-1"></span>
+                </div>
+                <div>
+                  <strong data-translate="skills-sub-title-2"></strong
+                  ><span data-translate="skills-text-2"></span>
+                </div>
+                <div>
+                  <strong data-translate="skills-sub-title-3"></strong
+                  ><span data-translate="skills-text-3"></span>
+                </div>
+                <div>
+                  <strong data-translate="skills-sub-title-4"></strong
+                  ><span data-translate="skills-text-4"></span>
+                </div>
+                <div>
+                  <strong data-translate="skills-sub-title-5"></strong
+                  ><span data-translate="skills-text-5"></span>
+                </div>
+              </div>
+            </div>
+            <div class="border-bottom"></div>
+          </div>
+        </section>
+        <section id="experience" class="experience">
+          <div class="container">
+            <div class="experience-me">
+              <h3 data-translate="experience-me-title">Experience</h3>
+              <div data-translate="experience-me-text"></div>
+            </div>
+            <div class="border-bottom"></div>
+          </div>
+        </section>
+        <section id="projects" class="projects">
+          <div class="container">
+            <div class="projects-me">
+              <h3 data-translate="projects-me-title">Projects</h3>
+              <div data-translate="projects-me-text"></div>
+            </div>
+            <div class="border-bottom"></div>
+          </div>
+        </section>
+        <section id="contact" class="contact">
+          <div class="container">
+            <div class="contact-me">
+              <h3 data-translate="contact-me-title">Contact</h3>
+              <ul class="links">
+                <li>
+                  <a
+                    href="https://github.com/yevhen-lymar"
+                    target="_blank"
+                    title="GitHub"
+                  >
+                    <img
+                      src="./images_svg/Color_Pop_Line_github_icon.svg"
+                      alt="GitHub Link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/yevhen-lymar-750913114/"
+                    target="_blank"
+                    title="LinkedIn"
+                  >
+                    <img
+                      src="./images_svg/Color_Pop_Line_linkedin_icon.svg"
+                      alt="LinkedIn Link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.behance.net/yevhenlymar"
+                    target="_blank"
+                    title="Behance"
+                  >
+                    <img
+                      src="./images_svg/Color_Pop_Line_behance_icon.svg"
+                      alt="Behance Link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/yevhen_lymar"
+                    target="_blank"
+                    title="Twitter"
+                  >
+                    <img
+                      src="./images_svg/Color_Pop_Line_twitter_icon.svg"
+                      alt="Twitter Link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://t.me/yevhen_lymar"
+                    target="_blank"
+                    title="Telegram"
+                  >
+                    <img
+                      src="./images_svg/Color_Pop_Line_telegram_icon.svg"
+                      alt="Telegram Link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/yevhen_lymar/"
+                    target="_blank"
+                    title="Instagram"
+                  >
+                    <img
+                      src="./images_svg/Color_Pop_Line_instagram_icon.svg"
+                      alt="Instagram Link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/@yevhen_lymar"
+                    target="_blank"
+                    title="YouTube"
+                  >
+                    <img
+                      src="./images_svg/Color_Pop_Line_youtube_icon.svg"
+                      alt="YouTube Link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.facebook.com/yevhen.lymar"
+                    target="_blank"
+                    title="Facebook"
+                  >
+                    <img
+                      src="./images_svg/Color_Pop_Line_facebook_icon.svg"
+                      alt="Facebook Link"
+                    />
+                  </a>
+                </li>
+              </ul>
+              <a
+                class="large-button"
+                href="mailto: lymar_evgeniy@ukr.net"
+                data-translate="email-text"
+              ></a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer" id="footer">
+        <div class="container">
+          <div><span data-translate="made-by"></span> yevhen_lymar</div>
+          <div>2024</div>
+        </div>
+      </footer>
+      <button class="btn scroll-top" id="up-scroll">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+
+    <!-- java-scripts -->
+    <script src="./scripts/scripts.js"></script>
+  </body>
+</html>
