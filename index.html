@@ -63,6 +63,8 @@
     <title data-translate="title"></title>
   </head>
   <body>
+    <!-- modal window -->
+    <div id="modal" class="modal"></div>
     <!-- loader -->
     <div class="hidden" id="loader">
       <div class="loader"></div>
@@ -72,21 +74,21 @@
       <header class="header" id="header">
         <div class="container">
           <div class="lang-button">
-            <button class="btn" id="lang-toggle" data-translate="lang-button">
+            <button class="btn" id="lang-toggle" data-translate="lang_button">
               Lang
             </button>
           </div>
           <div class="title-header">
-            <h1 data-translate="name">Yevhen Lymar</h1>
+            <h1 data-translate="name"></h1>
           </div>
           <nav class="nav-container">
             <ul>
-              <li><a href="#" data-translate="nav-home"></a></li>
-              <li><a href="#" data-translate="nav-about"></a></li>
+              <li><a href="#" data-translate="nav_home"></a></li>
+              <li><a href="" data-translate="nav_about" id="aboutBtn"></a></li>
               <li>
                 <a
                   href="./projects/index.html"
-                  data-translate="nav-projects"
+                  data-translate="nav_projects"
                 ></a>
               </li>
             </ul>
@@ -114,8 +116,8 @@
             <p data-translate="description" class="description"></p>
             <div data-translate="location" class="location"></div>
             <div class="info-me">
-              <h3 data-translate="info-me-title"></h3>
-              <div data-translate="info-me-text"></div>
+              <h3 data-translate="info_me_title"></h3>
+              <div data-translate="info_me_text"></div>
             </div>
             <div class="border-bottom"></div>
           </div>
@@ -123,27 +125,27 @@
         <section id="skills" class="skills">
           <div class="container">
             <div class="skills-me">
-              <h3 data-translate="skills-me-title">Skills</h3>
-              <div data-translate="skills-me-text">
+              <h3 data-translate="skills_me_title">Skills</h3>
+              <div data-translate="skills_me_text">
                 <div>
-                  <strong data-translate="skills-sub-title-1"></strong
-                  ><span data-translate="skills-text-1"></span>
+                  <strong data-translate="skills_sub_title_1"></strong
+                  ><span data-translate="skills_text_1"></span>
                 </div>
                 <div>
-                  <strong data-translate="skills-sub-title-2"></strong
-                  ><span data-translate="skills-text-2"></span>
+                  <strong data-translate="skills_sub_title_2"></strong
+                  ><span data-translate="skills_text_2"></span>
                 </div>
                 <div>
-                  <strong data-translate="skills-sub-title-3"></strong
-                  ><span data-translate="skills-text-3"></span>
+                  <strong data-translate="skills_sub_title_3"></strong
+                  ><span data-translate="skills_text_3"></span>
                 </div>
                 <div>
-                  <strong data-translate="skills-sub-title-4"></strong
-                  ><span data-translate="skills-text-4"></span>
+                  <strong data-translate="skills_sub_title_4"></strong
+                  ><span data-translate="skills_text_4"></span>
                 </div>
                 <div>
-                  <strong data-translate="skills-sub-title-5"></strong
-                  ><span data-translate="skills-text-5"></span>
+                  <strong data-translate="skills_sub_title_5"></strong
+                  ><span data-translate="skills_text_5"></span>
                 </div>
               </div>
             </div>
@@ -153,8 +155,8 @@
         <section id="experience" class="experience">
           <div class="container">
             <div class="experience-me">
-              <h3 data-translate="experience-me-title">Experience</h3>
-              <div data-translate="experience-me-text"></div>
+              <h3 data-translate="experience_me_title">Experience</h3>
+              <div data-translate="experience_me_text"></div>
             </div>
             <div class="border-bottom"></div>
           </div>
@@ -162,8 +164,8 @@
         <section id="projects" class="projects">
           <div class="container">
             <div class="projects-me">
-              <h3 data-translate="projects-me-title">Projects</h3>
-              <div data-translate="projects-me-text"></div>
+              <h3 data-translate="projects_me_title">Projects</h3>
+              <div data-translate="projects_me_text"></div>
             </div>
             <div class="border-bottom"></div>
           </div>
@@ -171,7 +173,7 @@
         <section id="contact" class="contact">
           <div class="container">
             <div class="contact-me">
-              <h3 data-translate="contact-me-title">Contact</h3>
+              <h3 data-translate="contact_me_title">Contact</h3>
               <ul class="links">
                 <li>
                   <a
@@ -273,7 +275,7 @@
               <a
                 class="large-button"
                 href="mailto: lymar_evgeniy@ukr.net"
-                data-translate="email-text"
+                data-translate="email_text"
               ></a>
             </div>
           </div>
@@ -281,7 +283,7 @@
       </main>
       <footer class="footer" id="footer">
         <div class="container">
-          <div><span data-translate="made-by"></span> yevhen_lymar</div>
+          <div><span data-translate="made_by"></span> yevhen_lymar</div>
           <div>2024</div>
         </div>
       </footer>
