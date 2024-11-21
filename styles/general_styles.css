@@ -262,12 +262,66 @@ body {
   font-size: 16px;
 }
 
-.profile .container .info-me > div {
+.profile .container .info-me div {
   line-height: 1.4;
 }
+.profile .container .info-me h4,
+.experience .container .experience-me h4 {
+  padding: var(--gap);
+}
 
-.skills .container div {
-  margin-bottom: 6px;
+.skills .skills-me .skill-text {
+  margin-bottom: var(--gap);
+  padding-left: var(--gap);
+}
+.skills .skills-me .skill-text::before {
+  content: "\f005";
+  font-family: "Font Awesome 6 Free";
+  color: var(--link-color);
+  font-size: 14px;
+  position: relative;
+  opacity: 0.2;
+  top: 0;
+  left: 0px;
+  z-index: 0;
+}
+
+.experience .experience-me .exper-text {
+  margin-bottom: var(--gap);
+  padding-left: var(--gap);
+}
+
+.experience .experience-me .exper-text::before {
+  content: "\23";
+  font-family: "Font Awesome 6 Free";
+  color: var(--link-color);
+  font-size: 16px;
+  position: relative;
+  opacity: 0.2;
+  top: 0;
+  left: 0px;
+  z-index: 0;
+}
+
+.projects .container .projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: var(--gap) 0;
+}
+
+.projects .container .projects-container .project {
+  background-color: var(--second-color);
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 150px;
+  border-radius: 22px;
+  margin: var(--gap);
+  cursor: pointer;
 }
 
 .contact .container .links {
