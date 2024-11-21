@@ -16,8 +16,8 @@ async function fetchLang() {
 async function loadTranslations() {
   try {
     translations = await fetchLang();
-    // console.log(translations)
-    const savedLang = localStorage.getItem("language") || "en";
+    // const savedLang = localStorage.getItem("language") || "en";
+    const savedLang = "en";
     updateLanguage(savedLang);
   } catch (error) {
     console.error("Error loading translations: ", error);
@@ -38,12 +38,10 @@ function updateLanguage(lang) {
       element.textContent = translations[lang][key];
     }
   });
-  localStorage.setItem("language", lang);
+  // localStorage.setItem("language", lang);
 }
 
-toggleLangBtn.addEventListener("click", toggleLanguage);
-
-function toggleLanguage() {
+toggleLangBtn.addEventListener("click", () => {
   pageContent.classList.add("hidden");
 
   setTimeout(() => {
@@ -58,42 +56,18 @@ function toggleLanguage() {
       pageContent.classList.remove("hidden");
     }, 1500);
   }, 500);
-}
-
-document.addEventListener("DOMContentLoaded", loadTranslations);
-
-function scrollToUp() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-}
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 200) {
-    scrollUpBtn.style.display = "block";
-  } else {
-    scrollUpBtn.style.display = "none";
-  }
 });
-
-scrollUpBtn.addEventListener("click", scrollToUp);
 
 async function infoMeInModalWindow() {
   const info = await fetchLang();
-  // console.log(info.en);
 
   aboutBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
     const pageLang = document.documentElement.getAttribute("lang");
-    // console.log(info[pageLang]);
 
     const title = info[pageLang].info_me_title;
     const text = info[pageLang].info_me_text;
-
-    // console.log(title);
-    // console.log(text);
 
     modal.innerHTML = `
     <div class="modal-content">
@@ -121,17 +95,10 @@ async function infoMeInModalWindow() {
   });
 }
 
-infoMeInModalWindow();
-
 function replaceBgBtnLang() {
-  // const languageSite = localStorage.getItem("language");
-  // const pageLang = document.documentElement.getAttribute("lang");
-  // console.log(languageSite);
-  // const newLang = currentLang === "en" ? "uk" : "en";
   const newLang = currentLang;
-  console.log(newLang, currentLang);
 
-  if (currentLang === "uk") {
+  if (newLang === "uk") {
     toggleLangBtn.classList.remove("ukraine-bg");
     toggleLangBtn.classList.add("english-bg");
   } else {
@@ -140,4 +107,21 @@ function replaceBgBtnLang() {
   }
 }
 
+infoMeInModalWindow();
+document.addEventListener("DOMContentLoaded", loadTranslations);
 document.addEventListener("DOMContentLoaded", replaceBgBtnLang);
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    scrollUpBtn.style.display = "block";
+  } else {
+    scrollUpBtn.style.display = "none";
+  }
+});
+
+scrollUpBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
