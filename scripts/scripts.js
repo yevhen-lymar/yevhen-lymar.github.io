@@ -121,10 +121,14 @@ async function infoMeInModalWindow() {
   });
 }
 
+window.addEventListener("DOMContentLoaded", replaceBgBtnLang);
+
 function replaceBgBtnLang() {
   const languageSite = localStorage.getItem("language");
+  const pageLang = document.documentElement.getAttribute("lang");
+  console.log(languageSite);
 
-  if (languageSite === "en") {
+  if (pageLang === "en") {
     toggleLangBtn.classList.remove("ukraine-bg");
     toggleLangBtn.classList.add("english-bg");
   } else {
