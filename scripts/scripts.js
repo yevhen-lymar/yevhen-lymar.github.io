@@ -50,9 +50,9 @@ function toggleLanguage() {
     loader.classList.remove("hidden");
     loader.classList.add("visible");
     setTimeout(() => {
-      replaceBgBtnLang();
       const newLang = currentLang === "en" ? "uk" : "en";
       updateLanguage(newLang);
+      replaceBgBtnLang();
       loader.classList.remove("visible");
       loader.classList.add("hidden");
       pageContent.classList.remove("hidden");
@@ -124,11 +124,14 @@ async function infoMeInModalWindow() {
 infoMeInModalWindow();
 
 function replaceBgBtnLang() {
-  const languageSite = localStorage.getItem("language");
-  const pageLang = document.documentElement.getAttribute("lang");
-  console.log(languageSite);
+  // const languageSite = localStorage.getItem("language");
+  // const pageLang = document.documentElement.getAttribute("lang");
+  // console.log(languageSite);
+  // const newLang = currentLang === "en" ? "uk" : "en";
+  const newLang = currentLang;
+  console.log(newLang, currentLang);
 
-  if (pageLang === "en") {
+  if (currentLang === "uk") {
     toggleLangBtn.classList.remove("ukraine-bg");
     toggleLangBtn.classList.add("english-bg");
   } else {
