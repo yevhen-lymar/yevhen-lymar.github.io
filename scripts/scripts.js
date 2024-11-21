@@ -121,13 +121,13 @@ async function infoMeInModalWindow() {
   });
 }
 
-window.addEventListener("DOMContentLoaded", replaceBgBtnLang);
+infoMeInModalWindow();
 
 function replaceBgBtnLang() {
   const languageSite = localStorage.getItem("language");
   const pageLang = document.documentElement.getAttribute("lang");
   console.log(languageSite);
-
+  
   if (pageLang === "en") {
     toggleLangBtn.classList.remove("ukraine-bg");
     toggleLangBtn.classList.add("english-bg");
@@ -137,4 +137,5 @@ function replaceBgBtnLang() {
   }
 }
 
-infoMeInModalWindow();
+
+window.addEventListener("DOMContentLoaded", replaceBgBtnLang);
