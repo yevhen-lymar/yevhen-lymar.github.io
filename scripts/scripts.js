@@ -50,6 +50,7 @@ function toggleLanguage() {
     loader.classList.remove("hidden");
     loader.classList.add("visible");
     setTimeout(() => {
+      replaceBgBtnLang();
       const newLang = currentLang === "en" ? "uk" : "en";
       updateLanguage(newLang);
       loader.classList.remove("visible");
@@ -97,10 +98,10 @@ async function infoMeInModalWindow() {
     modal.innerHTML = `
     <div class="modal-content">
       <div class="modal-title-box">
+        <h2>${title}</h2>
         <div class="close"><i class="fas fa-xmark"></i></div>
       </div>
       <div class="modal-info-box">
-        <h2>${title}</h2>
         <div class="modal-text-box">${text}</div>
       </div>
     </div>  
@@ -118,6 +119,18 @@ async function infoMeInModalWindow() {
       }
     });
   });
+}
+
+function replaceBgBtnLang() {
+  const languageSite = localStorage.getItem("language");
+
+  if (languageSite === "en") {
+    toggleLangBtn.classList.remove("ukraine-bg");
+    toggleLangBtn.classList.add("english-bg");
+  } else {
+    toggleLangBtn.classList.remove("english-bg");
+    toggleLangBtn.classList.add("ukraine-bg");
+  }
 }
 
 infoMeInModalWindow();
