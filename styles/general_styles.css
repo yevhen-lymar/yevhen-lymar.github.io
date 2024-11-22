@@ -270,11 +270,14 @@ body {
   padding: var(--gap);
 }
 
-.skills .skills-me .skill-text {
+.profile .info-me .info-me-quality,
+.skills .skills-me .skill-text,
+.experience .experience-me .exper-text {
   margin-bottom: var(--gap);
   padding-left: var(--gap);
 }
-.skills .skills-me .skill-text::before {
+
+.profile .info-me .info-me-quality::before {
   content: "\f005";
   font-family: "Font Awesome 6 Free";
   color: var(--link-color);
@@ -285,10 +288,16 @@ body {
   left: 0px;
   z-index: 0;
 }
-
-.experience .experience-me .exper-text {
-  margin-bottom: var(--gap);
-  padding-left: var(--gap);
+.skills .skills-me .skill-text::before {
+  content: "\e8b8";
+  font-family: "Material Icons";
+  color: var(--link-color);
+  font-size: 16px;
+  position: relative;
+  opacity: 0.2;
+  top: 0;
+  left: 0px;
+  z-index: 0;
 }
 
 .experience .experience-me .exper-text::before {
@@ -317,11 +326,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  height: 150px;
+  width: 220px;
+  height: 200px;
   border-radius: 22px;
-  margin: var(--gap);
   cursor: pointer;
+  margin: 10px;
 }
 
 .contact .container .links {
@@ -526,6 +535,10 @@ body {
   }
   .profile .icon.eight {
     left: 15px;
+  }
+
+  .projects .container .projects-container .project {
+    width: 80%;
   }
 
   .scroll-top {
