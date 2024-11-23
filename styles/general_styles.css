@@ -271,6 +271,7 @@ body {
 }
 
 .profile .info-me .info-me-quality,
+.profile .info-me .info-me-lang,
 .skills .skills-me .skill-text,
 .experience .experience-me .exper-text {
   margin-bottom: var(--gap);
@@ -285,7 +286,18 @@ body {
   position: relative;
   opacity: 0.2;
   top: 0;
-  left: 0px;
+  left: 0;
+  z-index: 0;
+}
+.profile .info-me .info-me-lang::before {
+  content: "\e894";
+  font-family: "Material Icons";
+  color: var(--link-color);
+  font-size: 16px;
+  position: relative;
+  opacity: 0.2;
+  top: 2px;
+  left: 0;
   z-index: 0;
 }
 .skills .skills-me .skill-text::before {
@@ -295,8 +307,8 @@ body {
   font-size: 16px;
   position: relative;
   opacity: 0.2;
-  top: 0;
-  left: 0px;
+  top: 2px;
+  left: 0;
   z-index: 0;
 }
 
@@ -308,7 +320,7 @@ body {
   position: relative;
   opacity: 0.2;
   top: 0;
-  left: 0px;
+  left: 0;
   z-index: 0;
 }
 
