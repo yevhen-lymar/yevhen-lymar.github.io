@@ -7,6 +7,43 @@
     <title>Calculator</title>
   </head>
   <body>
+    <h1>Calculator</h1>
+    <div class="calc-container">
+      <div class="display-container">
+        <input
+          type="text"
+          id="display"
+          class="display"
+          placeholder="0"
+          disabled
+        />
+      </div>
+      <div class="numbers-container">
+        <div class="symbol">
+          <input type="button" value="+" id="plus" class="btn orange" />
+          <input type="button" value="-" id="minus" class="btn orange" />
+          <input type="button" value="*" id="x" class="btn orange" />
+          <input type="button" value="/" id="/" class="btn orange" />
+        </div>
+        <div class="num">
+          <input type="button" value="1" id="1" class="btn" />
+          <input type="button" value="2" id="2" class="btn" />
+          <input type="button" value="3" id="3" class="btn" />
+          <input type="button" value="4" id="4" class="btn" />
+          <input type="button" value="5" id="5" class="btn" />
+          <input type="button" value="6" id="6" class="btn" />
+          <input type="button" value="7" id="7" class="btn" />
+          <input type="button" value="8" id="8" class="btn" />
+          <input type="button" value="9" id="9" class="btn" />
+          <input type="button" value="0" id="0" class="btn" />
+          <input type="button" value="." id="dot" class="btn dot" />
+        </div>
+        <div class="result">
+          <button id="clear" class="btn result">AC</button>
+          <button id="equal" class="btn result">=</button>
+        </div>
+      </div>
+    </div>
     <!-- java-scripts -->
     <script src="../script/calculatorScripts.js"></script>
   </body>

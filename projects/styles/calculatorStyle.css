@@ -1,0 +1,112 @@
+@import url("/styles/font.css");
+
+* {
+  box-sizing: border-box;
+  border: none;
+}
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.calc-container {
+  background-color: #eee;
+  padding: 1.5rem;
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+
+.display-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.display {
+  background-color: #fff;
+  width: 100%;
+  height: 4rem;
+  text-align: right;
+  font-family: inherit;
+  font-size: 2rem;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  border-radius: 0.4rem;
+}
+
+.numbers-container {
+  /* width: 100%; */
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  margin: 0;
+  padding: 0;
+}
+
+.symbol {
+  display: flex;
+  flex-direction: column;
+}
+
+.num {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  width: 5rem;
+  height: 5rem;
+  font-size: 2rem;
+  margin: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+.btn:hover {
+  opacity: 0.6;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn.dot {
+  width: 10.4rem;
+}
+
+.btn.result {
+  height: 10.4rem;
+  background-color: orange;
+  color: #000;
+  font-weight: bold;
+}
+
+.btn.orange {
+  background-color: orange;
+  color: #000;
+}
