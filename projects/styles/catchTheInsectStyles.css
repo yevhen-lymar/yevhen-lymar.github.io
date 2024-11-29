@@ -154,3 +154,9 @@ h1 {
   width: var(--img-insect-size);
   height: var(--img-insect-size);
 }
+
+@media (max-width: 576px) {
+  h3 {
+    font-size: 0.9em;
+  }
+}

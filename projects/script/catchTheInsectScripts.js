@@ -5,6 +5,9 @@ const timeEl = document.getElementById("time");
 const scoreEl = document.getElementById("score");
 const message = document.getElementById("message");
 const game_container = document.getElementById("game-container");
+const reloadBtn = document.getElementById("reload-btn");
+
+reloadBtn.addEventListener("click", () => location.reload());
 
 let seconds = 0;
 let score = 0;
