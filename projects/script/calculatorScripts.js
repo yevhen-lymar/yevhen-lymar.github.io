@@ -7,7 +7,6 @@ input.forEach((el) => {
   el.addEventListener("click", (e) => {
     const value = e.target.value;
     display.value += value;
-    console.log(value);
   });
 });
 
@@ -16,7 +15,5 @@ clear.addEventListener("click", () => {
 });
 
 equal.addEventListener("click", () => {
-  console.log(+display.value);
-  console.log(display.value);
-  display.value = eval(display.value);
+  display.value = math.evaluate(display.value);
 });
