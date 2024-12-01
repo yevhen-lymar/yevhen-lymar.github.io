@@ -15,5 +15,10 @@ clear.addEventListener("click", () => {
 });
 
 equal.addEventListener("click", () => {
-  display.value = math.evaluate(display.value);
+  console.log(display.value);
+  if (display.value === "") {
+    display.value = "";
+  } else {
+    display.value = math.evaluate(display.value);
+  }
 });
