@@ -15,7 +15,7 @@ clear.addEventListener("click", () => {
 });
 
 equal.addEventListener("click", () => {
-  console.log(display.value);
+  // console.log(display.value);
   if (display.value === "") {
     display.value = "";
   } else {
