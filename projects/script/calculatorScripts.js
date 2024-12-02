@@ -7,6 +7,10 @@ input.forEach((el) => {
   el.addEventListener("click", (e) => {
     const value = e.target.value;
     display.value += value;
+
+    // if (el.value === "+") {
+    //   console.log(display.value.slice(0, 1));
+    // }
   });
 });
 
