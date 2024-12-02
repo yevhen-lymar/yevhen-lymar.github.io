@@ -1,28 +1,17 @@
 const gameBoard = document.getElementById("container-board");
 const restartBtn = document.getElementById("restartBtn");
 
-let currentPlayer = "X";
-
-const cells = document.querySelectorAll(".cell");
-const gameState = Array(9).fill(null);
-
-const winningCombinations = [
-  [0, 1, 2],
-  [3, 4, 5],
-  [6, 7, 8],
-  [0, 3, 6],
-  [1, 4, 7],
-  [2, 5, 8],
-  [0, 4, 8],
-  [2, 4, 6],
-];
-
 for (let i = 0; i < 9; i++) {
   const cell = document.createElement("div");
   cell.classList.add("cell");
   cell.dataset.index = i;
   gameBoard.appendChild(cell);
 }
+
+let currentPlayer = "X";
+
+const cells = document.querySelectorAll(".cell");
+const gameState = Array(9).fill(null);
 
 function handleCellClick(event) {
   const cell = event.target;
@@ -51,6 +40,16 @@ cells.forEach((cell) => {
 });
 
 function checkWinner() {
+  const winningCombinations = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
   for (const combination of winningCombinations) {
     const [a, b, c] = combination;
     if (
