@@ -28,7 +28,6 @@ body {
 }
 .screen {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100vw;
@@ -40,10 +39,44 @@ body {
   margin-top: -100vh;
 }
 
+.start-screen {
+  flex-direction: column;
+}
+
+.player-screen {
+  display: flex;
+}
+
+.player-name {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 48px;
+  padding: 0 32px;
+  transition: transform 0.7s ease-in-out;
+}
+
+.player-name.player-one {
+  transform: translateX(-100%);
+}
+.player-name.player-two {
+  transform: translateX(100%);
+}
+
+.player-name.in {
+  transform: translateX(0);
+}
+
+.fa-bolt {
+  font-size: 32px;
+}
+
 h1 {
   text-transform: uppercase;
   line-height: 2;
   margin: 22px 0;
+}
+
+.game-screen {
+  flex-direction: column;
 }
 
 .container-players {
@@ -177,4 +210,11 @@ h1 {
 
 .btn:active {
   transform: scale(0.98);
+}
+
+@media (max-width: 480px) {
+  .player-name {
+    font-size: 28px;
+    padding: 0 18px;
+  }
 }

@@ -1,12 +1,17 @@
 const screens = document.querySelectorAll(".screen");
+const players = document.querySelectorAll(".player-name");
 const gameBoard = document.getElementById("container-board");
+// buttons
 const restartBtn = document.getElementById("restartBtn");
 const startBtn = document.getElementById("startBtn");
 const reloadBtn = document.getElementById("reloadBtn");
 const nextMove = document.getElementById("nextMove");
 const firstMove = document.getElementById("firstMove");
+// players
 const firstPlayerInput = document.getElementById("firstPlayerInput");
 const secondPlayerInput = document.getElementById("secondPlayerInput");
+const onePlayerName = document.getElementById("playerOneName");
+const twoPlayerName = document.getElementById("playerTwoName");
 const firstPlayerName = document.getElementById("firstPlayerName");
 const secondPlayerName = document.getElementById("secondPlayerName");
 const firstPlayerScoreInput = document.getElementById("firstPlayerScore");
@@ -18,13 +23,23 @@ let firstPlayer = "";
 let secondPlayer = "";
 
 startBtn.addEventListener("click", () => {
-  screens[0].classList.add("up");
+  firstPlayer = firstPlayerInput.value;
+  secondPlayer = secondPlayerInput.value;
+  onePlayerName.innerText = firstPlayerInput.value;
+  twoPlayerName.innerText = secondPlayerInput.value;
 
   firstPlayerName.innerHTML = `<strong>${firstPlayerInput.value}</strong> plays for X`;
   secondPlayerName.innerHTML = `<strong>${secondPlayerInput.value}</strong> plays for O`;
 
-  firstPlayer = firstPlayerInput.value;
-  secondPlayer = secondPlayerInput.value;
+  players.forEach((player) => {
+    player.classList.add("in");
+  });
+
+  screens[0].classList.add("up");
+
+  setTimeout(() => {
+    screens[1].classList.add("up");
+  }, 2500);
 });
 
 for (let i = 0; i < 9; i++) {

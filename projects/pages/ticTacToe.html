@@ -3,36 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="../styles/ticTacToe.css" />
     <title>Tic Tac Toe</title>
   </head>
   <body>
-    <div class="screen">
+    <!-- modal window -->
+    <div class="modal" id="modal"></div>
+    <!-- content game -->
+    <!-- start screen -->
+    <div class="screen start-screen">
       <h1>Tic Tac Toe</h1>
       <div class="container-players">
         <div class="first-player board">
           <h3>First Player</h3>
           <input
             type="text"
-            name="firstPlayer"
+            name="first-player"
             id="firstPlayerInput"
             class="name"
           />
-          <label for="firstPlayer input">Enter your name</label>
+          <label for="firstPlayerInput">Enter your name</label>
         </div>
         <div class="second-player board">
           <h3>Second Player</h3>
           <input
             type="text"
-            name="secondPlayer"
+            name="second-player"
             id="secondPlayerInput"
             class="name"
           />
-          <label for="secondPlayer">Enter your name</label>
+          <label for="secondPlayerInput">Enter your name</label>
         </div>
       </div>
       <button class="btn" id="startBtn">Start Game</button>
     </div>
+    <!-- players screen -->
+    <div class="screen players-screen">
+      <div class="player-name player-one" id="playerOneName"></div>
+      <i class="fa-solid fa-bolt"></i>
+      <div class="player-name player-two" id="playerTwoName"></div>
+    </div>
+    <!-- game screen -->
     <div class="screen game-screen">
       <div class="players-board">
         <div class="players-score">
