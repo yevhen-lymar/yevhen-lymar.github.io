@@ -7,9 +7,53 @@
     <title>Tic Tac Toe</title>
   </head>
   <body>
-    <h1>Tic Tac Toe</h1>
-    <div id="container-board" class="container-board"></div>
-    <button id="restartBtn" class="btn">Restart Game</button>
+    <div class="screen">
+      <h1>Tic Tac Toe</h1>
+      <div class="container-players">
+        <div class="first-player board">
+          <h3>First Player</h3>
+          <input
+            type="text"
+            name="firstPlayer"
+            id="firstPlayerInput"
+            class="name"
+          />
+          <label for="firstPlayer input">Enter your name</label>
+        </div>
+        <div class="second-player board">
+          <h3>Second Player</h3>
+          <input
+            type="text"
+            name="secondPlayer"
+            id="secondPlayerInput"
+            class="name"
+          />
+          <label for="secondPlayer">Enter your name</label>
+        </div>
+      </div>
+      <button class="btn" id="startBtn">Start Game</button>
+    </div>
+    <div class="screen game-screen">
+      <div class="players-board">
+        <div class="players-score">
+          <h3>Score:</h3>
+          <span class="score first-player" id="firstPlayerScore">0</span>
+          <span class="score second-player" id="secondPlayerScore">0</span>
+        </div>
+        <div class="players-name">
+          <div id="firstPlayerName" class="player"></div>
+          <div id="secondPlayerName" class="player"></div>
+        </div>
+      </div>
+      <div class="next-move">
+        <span id="firstMove">first</span> move: <span id="nextMove">X</span>
+      </div>
+      <div id="container-board" class="container-board"></div>
+      <div class="conatainer-btn">
+        <button id="restartBtn" class="btn">Restart Game</button>
+        <button id="reloadBtn" class="btn">Reload Game</button>
+      </div>
+    </div>
     <!-- java-script -->
     <script src="../script/ticTacToe.js"></script>
   </body>
