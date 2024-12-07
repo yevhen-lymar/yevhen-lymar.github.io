@@ -1,6 +1,8 @@
 const screens = document.querySelectorAll(".screen");
 const players = document.querySelectorAll(".player-name");
 const gameBoard = document.getElementById("container-board");
+const infoPl = document.querySelector(".container-info-pl");
+const go = document.querySelector(".container-go");
 // buttons
 const restartBtn = document.getElementById("restartBtn");
 const startBtn = document.getElementById("startBtn");
@@ -34,12 +36,18 @@ startBtn.addEventListener("click", () => {
   players.forEach((player) => {
     player.classList.add("in");
   });
-
   screens[0].classList.add("up");
 
   setTimeout(() => {
+    infoPl.classList.add("hidden");
+    setTimeout(() => {
+      go.classList.remove("hidden");
+    }, 750);
+  }, 1500);
+
+  setTimeout(() => {
     screens[1].classList.add("up");
-  }, 2500);
+  }, 3000);
 });
 
 for (let i = 0; i < 9; i++) {
@@ -54,6 +62,7 @@ let firstPlayerScore = 0;
 let secondPlayerScore = 0;
 let winnerPlayer = "";
 let draw = "";
+let winner = "";
 
 const cells = document.querySelectorAll(".cell");
 const gameState = Array(9).fill(null);
@@ -70,7 +79,8 @@ function handleCellClick(event) {
   winnerPlayer = currentPlayer === "X" ? firstPlayer : secondPlayer;
 
   if (checkWinner()) {
-    setTimeout(() => alert(`${winnerPlayer} is WINNER!`), 100);
+    winner = `${winnerPlayer} is WINNER!`;
+    setTimeout(() => alert(winner), 100);
     return;
   }
 
@@ -126,6 +136,9 @@ function checkDraw() {
 
 restartBtn.addEventListener("click", () => {
   gameState.fill(null);
+  const cellIsNull = gameState.every((cell) => cell === null);
+  console.log(!cellIsNull);
+  console.log(cellIsNull);
   cells.forEach((cell) => {
     cell.textContent = "";
     cell.classList.remove("cell-win");
@@ -134,12 +147,12 @@ restartBtn.addEventListener("click", () => {
   firstMove.innerText = "first";
   nextMove.innerHTML = currentPlayer;
 
-  if (draw === "Draw") {
+  if (draw === "Draw" && cellIsNull) {
     firstPlayerScore++;
     secondPlayerScore++;
-  } else if (winnerPlayer === firstPlayer) {
+  } else if (winner === `${firstPlayer} is WINNER!` && !cellIsNull) {
     firstPlayerScore++;
-  } else {
+  } else if (winner === `${secondPlayer} is WINNER!` && !cellIsNull) {
     secondPlayerScore++;
   }
 

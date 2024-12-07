@@ -39,12 +39,38 @@ body {
   margin-top: -100vh;
 }
 
+.visibility {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
 .start-screen {
   flex-direction: column;
 }
 
-.player-screen {
+.players-screen {
   display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.container-info-pl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease;
+}
+
+.container-go {
+  position: absolute;
+  top: 40%;
+  transition: opacity 0.3s ease;
+}
+
+.container-go h1 {
+  font-size: 62px;
 }
 
 .player-name {
@@ -55,10 +81,10 @@ body {
 }
 
 .player-name.player-one {
-  transform: translateX(-100%);
+  transform: translateX(-150%);
 }
 .player-name.player-two {
-  transform: translateX(100%);
+  transform: translateX(150%);
 }
 
 .player-name.in {
@@ -214,7 +240,7 @@ h1 {
 
 @media (max-width: 480px) {
   .player-name {
-    font-size: 28px;
+    font-size: 32px;
     padding: 0 18px;
   }
 }
