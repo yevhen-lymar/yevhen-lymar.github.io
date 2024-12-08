@@ -61,8 +61,7 @@ let currentPlayer = "X";
 let firstPlayerScore = 0;
 let secondPlayerScore = 0;
 let winnerPlayer = "";
-let draw = "";
-let winner = "";
+let gameResult = "";
 
 const cells = document.querySelectorAll(".cell");
 const gameState = Array(9).fill(null);
@@ -79,14 +78,14 @@ function handleCellClick(event) {
   winnerPlayer = currentPlayer === "X" ? firstPlayer : secondPlayer;
 
   if (checkWinner()) {
-    winner = `${winnerPlayer} is WINNER!`;
-    setTimeout(() => alert(winner), 100);
+    gameResult = `${winnerPlayer} is WINNER!`;
+    setTimeout(() => alert(gameResult), 100);
     return;
   }
 
   if (checkDraw()) {
     setTimeout(() => alert("Draw!"), 100);
-    draw = "Draw";
+    gameResult = "Draw";
     return;
   }
 
@@ -135,27 +134,46 @@ function checkDraw() {
 }
 
 restartBtn.addEventListener("click", () => {
+  switch (gameResult) {
+    case `${firstPlayer} is WINNER!`:
+      handleWinFirst();
+      break;
+    case `${secondPlayer} is WINNER!`:
+      handleWinSecond();
+      break;
+    case "Draw":
+      increaseBoth();
+      break;
+    default:
+      currentPlayer = currentPlayer === "X" ? "X" : "O";
+  }
+
   gameState.fill(null);
- 
+
   cells.forEach((cell) => {
     cell.textContent = "";
     cell.classList.remove("cell-win");
   });
-  // currentPlayer = "X";
+
   firstMove.innerText = "first";
   nextMove.innerText = currentPlayer;
 
-  if (draw === "Draw") {
-    firstPlayerScore++;
-    secondPlayerScore++;
-  } else if (winner === `${firstPlayer} is WINNER!`) {
-    firstPlayerScore++;
-  } else if (winner === `${secondPlayer} is WINNER!`) {
-    secondPlayerScore++;
-  }
   firstPlayerScoreInput.innerText = firstPlayerScore;
   secondPlayerScoreInput.innerText = secondPlayerScore;
 
-  draw = "";
-  winner = "";
+  gameResult = "";
 });
+
+function increaseBoth() {
+  firstPlayerScore++;
+  secondPlayerScore++;
+}
+
+function handleWinFirst() {
+  firstPlayerScore++;
+  currentPlayer = "X";
+}
+function handleWinSecond() {
+  secondPlayerScore++;
+  currentPlayer = "O";
+}
