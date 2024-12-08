@@ -136,26 +136,26 @@ function checkDraw() {
 
 restartBtn.addEventListener("click", () => {
   gameState.fill(null);
-  const cellIsNull = gameState.every((cell) => cell === null);
-  console.log(!cellIsNull);
-  console.log(cellIsNull);
+ 
   cells.forEach((cell) => {
     cell.textContent = "";
     cell.classList.remove("cell-win");
   });
   // currentPlayer = "X";
   firstMove.innerText = "first";
-  nextMove.innerHTML = currentPlayer;
+  nextMove.innerText = currentPlayer;
 
-  if (draw === "Draw" && cellIsNull) {
+  if (draw === "Draw") {
     firstPlayerScore++;
     secondPlayerScore++;
-  } else if (winner === `${firstPlayer} is WINNER!` && !cellIsNull) {
+  } else if (winner === `${firstPlayer} is WINNER!`) {
     firstPlayerScore++;
-  } else if (winner === `${secondPlayer} is WINNER!` && !cellIsNull) {
+  } else if (winner === `${secondPlayer} is WINNER!`) {
     secondPlayerScore++;
   }
-
   firstPlayerScoreInput.innerText = firstPlayerScore;
   secondPlayerScoreInput.innerText = secondPlayerScore;
+
+  draw = "";
+  winner = "";
 });
