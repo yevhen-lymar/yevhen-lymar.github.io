@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ознайомтесь із професійним портфоліо Front-End розробника! Навички HTML, CSS, JavaScript, React, та адаптивний дизайн. Готовий до нових проєктів і співпраці."
+    />
+    <meta
+      name="keywords"
+      content="Yevhen, Lymar, JavaScript, HTML, CSS, Git, Resume, CV, Projects"
+    />
+    <meta name="author" content="Yevhen Lymar" />
+    <meta
+      property="og:title"
+      content="Front-End Developer Resume | HTML, CSS, JavaScript & React Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Ознайомтесь із професійним портфоліо Front-End розробника! Навички HTML, CSS, JavaScript, React, та адаптивний дизайн. Готовий до нових проєктів і співпраці.
+      "
+    />
+    <meta property="og:image" content="./images_favicon/apple-touch-icon.png" />
+    <meta
+      property="og:url"
+      content="https://yevhen-lymar.github.io/projects/index.html"
+    />
+    <meta name="twitter:card" content="./images_favicon/favicon-32x32.png" />
+    <!-- favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../images_favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images_favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images_favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../images_favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="../images_favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- page styles -->
+    <link rel="stylesheet" href="../styles/gallery_styles.css" />
+    <title>Gallery | Yevhen Lymar - Info</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container">
+        <a href="../index.html" class="link-home"
+          ><i class="fa-solid fa-house"></i> <span>Home</span></a
+        >
+        <div class="title-header">
+          <h1>My Gallery</h1>
+        </div>
+      </div>
+    </header>
+    <!-- loader -->
+    <div class="loader-container" id="loader-container">
+      <div id="loader" class="loader" style="display: none"></div>
+    </div>
+    <!-- modal window -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-title-box">
+          <h2 id="modalTitle"></h2>
+          <div class="close"><i class="fas fa-xmark"></i></div>
+        </div>
+        <div class="modal-img-box">
+          <img class="modal-img" id="modalImg" />
+        </div>
+        <div class="switch prev" id="prev">
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="switch next" id="next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+    </div>
+    <!-- content -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="gallery-container-grid">
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/3ds-max_Bedroom_1.jpg"
+              alt="bedroom 1"
+            />
+          </div>
+          <div class="gallery-item">
+            <img src="../images_gallery/3ds-max_house_1.jpg" alt="house 1" />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/3ds-max_kitchen_1.jpg"
+              alt="kitchen 1"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/3ds-max_kitchen_1_1.jpg"
+              alt="kitchen 1 1"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/3ds-max_livingroom_1.jpg"
+              alt="livingroom 1"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/3ds-max_livingroom_1_close_up_1.jpg"
+              alt="livingroom close up 1"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/3ds-max_livingroom_1_close_up_2.jpg"
+              alt="livingroom close up 2"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/3ds-max_kitchen_2.jpg"
+              alt="kitchen 2"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/3ds-max_livingroom_2.jpg"
+              alt="livingroom 2"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/3ds-max_livingroom_3.jpg"
+              alt="livingroom 3"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/3ds-max_Modern_Reception_&_Bedroom_1.jpg"
+              alt="modern reception and bedroom 1"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/3ds-max_Modern_Reception_&_Bedroom_2.jpg"
+              alt="modern reception and bedroom 2"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/3ds-max_music_room.jpg"
+              alt="music room"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/blender_Astronaut_Room.jpg"
+              alt="astronaut room"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/blender_Cable_and_Tubes.png"
+              alt="cable and tubes"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/blender_Cartoon_House.png"
+              alt="cartoon house"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/blender_coffee_shop.png"
+              alt="coffee shop"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/blender_Cyberpunk_Building.png"
+              alt="cyberpunk building"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/blender_Isometric_Room.The_Simpsons.jpg"
+              alt="isometric room simpsons"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/blender_Portal_Environment.png"
+              alt="portal environment"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../images_gallery/blender_Spooky_House.png"
+              alt="spooky house"
+            />
+          </div>
+          <div class="gallery-item">
+            <img src="../images_gallery/blender_TV.png" alt="tv" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div>Made by yevhen_lymar</div>
+        <div>2024</div>
+      </div>
+    </footer>
+
+    <button class="btn scroll-top" id="up-scroll">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- java-scripts -->
+    <script src="../scripts/gallery_scripts.js"></script>
+  </body>
+</html>
