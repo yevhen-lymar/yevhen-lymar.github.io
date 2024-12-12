@@ -199,7 +199,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: fit-content;
-  height: 90vh;
+  height: 80vh;
   background-color: var(--link-color);
   color: var(--main-color);
   margin: auto;

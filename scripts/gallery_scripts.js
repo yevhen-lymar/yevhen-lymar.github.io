@@ -2,6 +2,7 @@
 const scrollUpBtn = document.getElementById("up-scroll");
 // modal window variables
 const modal = document.getElementById("modal");
+const modalContent = document.getElementById("modalContent");
 const IMAGES = document.querySelectorAll(".gallery-item img");
 const modalImg = document.getElementById("modalImg");
 const modalTitle = document.getElementById("modalTitle");
@@ -18,6 +19,7 @@ function showImageInModal(index) {
   modalImg.src = IMAGES[currentIndex].src;
   modalTitle.innerText = IMAGES[currentIndex].alt;
   modal.style.display = "block";
+
   setTimeout(() => {
     modal.classList.add("show");
     modalImg.classList.add("show");
@@ -78,3 +80,22 @@ window.addEventListener("scroll", () => {
 });
 
 scrollUpBtn.addEventListener("click", scrollToUp);
+
+// keyboard down
+document.addEventListener("keydown", (event) => {
+  if (modal.style.display === "block") {
+    switch (event.key) {
+      case "ArrowRight":
+        currentIndex = (currentIndex + 1) % IMAGES.length;
+        showImageInModal(currentIndex);
+        break;
+      case "ArrowLeft":
+        currentIndex = (currentIndex - 1 + IMAGES.length) % IMAGES.length;
+        showImageInModal(currentIndex);
+        break;
+      case "Escape":
+        hideModal();
+        break;
+    }
+  }
+});

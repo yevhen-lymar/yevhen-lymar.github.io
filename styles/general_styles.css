@@ -271,6 +271,7 @@ body {
 }
 
 .profile .info-me .info-me-quality,
+.profile .info-me .info-me-education,
 .profile .info-me .info-me-lang,
 .skills .skills-me .skill-text,
 .experience .experience-me .exper-text {
@@ -286,6 +287,17 @@ body {
   position: relative;
   opacity: 0.2;
   top: 0;
+  left: 0;
+  z-index: 0;
+}
+.profile .info-me .info-me-education::before {
+  content: "\e80c";
+  font-family: "Material Icons";
+  color: var(--link-color);
+  font-size: 16px;
+  position: relative;
+  opacity: 0.2;
+  top: 2px;
   left: 0;
   z-index: 0;
 }
