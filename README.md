@@ -1,15 +1,70 @@
-### Hi there 👋
+<h1 align="center">Привіт! 👋 Мене звати Євген</h1>
+<h3 align="center">Я — Full-Stack Web Developer, системний адміністратор і UI-ентузіаст</h3>
 
-**yevhen-lymar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+---
 
-Here are some ideas to get you started:
+### 🚀 Про мене
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+🔹 Самоучка з пристрастю до веброзробки та автоматизації  
+🔹 Люблю структуру, чистий код і логіку  
+🔹 Поєдную дизайн, функціональність і зручність для користувача  
+🔹 Досвід від сайтів до складних застосунків з інтеграціями
+
+---
+
+### 🧠 Мої ключові навички
+
+#### 🌐 **Frontend**
+- ⚡ HTML5 / CSS3 / SASS / BEM
+- ⚡ JavaScript (ES6+), React
+- ⚡ TailwindCSS, адаптивна верстка
+- ⚡ UI/UX, анімації, сучасні підходи
+
+#### 💻 **Backend / CMS / Інтеграції**
+- 🔧 WordPress (кастомізація, плагіни)
+- 🔧 Google Apps Script (Sheets, Forms)
+- 🔧 REST API, Telegram Bots
+
+#### ⚙️ **DevOps / Automation**
+- 💾 Linux / Ubuntu / Windows Server
+- 📡 FTP / резервне копіювання / мережі
+- 📁 PowerShell, CMD, Chocolatey
+
+#### 📊 **Інструменти**
+- 🔨 VS Code, Git, GitHub
+- 📦 npm, Netlify, Vercel
+- 📈 SEO, продуктивність, аналітика
+
+---
+
+### 🛠️ Стек технологій
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=html,css,sass,js,react,tailwind,wordpress,git,github,vscode,powershell,linux" />
+</p>
+
+---
+
+### 📈 Моя статистика GitHub
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=yevhen-code&show_icons=true&theme=tokyonight" alt="yevhen-code" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yevhen-code&layout=compact&theme=tokyonight" alt="yevhen-code" />
+</p>
+
+---
+
+### 📬 Зв’язатися зі мною
+
+- 💌 Email: [yevhen.dev.contact@gmail.com](mailto:yevhen.dev.contact@gmail.com)
+- 💼 LinkedIn: [linkedin.com/in/yevhen-dev](https://linkedin.com/in/yevhen-dev) *(якщо є)*
+- 🌐 Портфоліо: [yevhen.dev](https://yevhen.dev) *(якщо є)*
+
+---
+
+> *“Код без структури — як дім без фундаменту.”* 🧱  
+> ***Пишу чистий, надійний, продуманий код.***
+
