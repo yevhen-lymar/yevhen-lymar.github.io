@@ -48,18 +48,18 @@
 ### 📈 Моя статистика GitHub
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=yevhen-lymar&show_icons=true&theme=tokyonight" alt="yevhen-code" />
+  <img src="https://github-readme-stats.vercel.app/api?username=yevhen-lymar&show_icons=true&theme=tokyonight" alt="yevhen-lymar" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yevhen-lymar&layout=compact&theme=tokyonight" alt="yevhen-code" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yevhen-lymar&layout=compact&theme=tokyonight" alt="yevhen-lymar" />
 </p>
 
 ---
 
 ### 📬 Зв’язатися зі мною
 
-- 💌 Email: [yevhen.dev.contact@gmail.com](mailto:yevhen.dev.contact@gmail.com)
+- 💌 Email: [lymar.yevhen@gmail.com](mailto:lymar.yevhen@gmail.com)
 - 💼 LinkedIn: [linkedin.com/in/yevhen-dev](https://linkedin.com/in/yevhen-dev) *(якщо є)*
 - 🌐 Портфоліо: [yevhen.dev](https://yevhen.dev) *(якщо є)*
 
