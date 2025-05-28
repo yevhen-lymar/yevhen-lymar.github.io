@@ -48,11 +48,11 @@
 ### 📈 Моя статистика GitHub
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=yevhen-code&show_icons=true&theme=tokyonight" alt="yevhen-code" />
+  <img src="https://github-readme-stats.vercel.app/api?username=yevhen-lymar&show_icons=true&theme=tokyonight" alt="yevhen-code" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yevhen-code&layout=compact&theme=tokyonight" alt="yevhen-code" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yevhen-lymar&layout=compact&theme=tokyonight" alt="yevhen-code" />
 </p>
 
 ---
